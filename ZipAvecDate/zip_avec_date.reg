@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\ZipWithDate]
+@="Zip avec la date"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ZipWithDate\command]
+@="cmd /c powershell Compress-Archive -Path \"%1\" -DestinationPath \"%1_$(get-date -f yyyyMMdd)_$(get-date -f HHmmss).zip\""
